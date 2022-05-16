@@ -399,7 +399,7 @@ class HEOM:
             raise ValueError
 
         qobj = Qobj(inpt=extended_operator.data[(row * dim):((row+1) * dim), :],
-                    dims=[[[hilbert_dim], [hilbert_dim]], 1],
+                    dims=[[[hilbert_dim], [hilbert_dim]], [1]],
                     shape=new_shape,
                     type="operator-ket")
         return vector_to_operator(qobj)
